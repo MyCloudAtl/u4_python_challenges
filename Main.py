@@ -15,7 +15,28 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def minutes_to_seconds(minutes):
+    return minutes * 60
+#print(minutes_to_seconds(1)) 
+#print(minutes_to_seconds(5)) 
+def hours_to_seconds(hours):
+    return hours * 3600 
+#print(hours_to_seconds(1))  
+def seconds_in_day ():
+    hours_in_a_day = 24
+    return hours_to_seconds(hours_in_a_day)
+#print (seconds_in_day())
+def hours_in_june():
+    hours_in_a_day = 24
+    days_in_month_of_june = 30
+    return hours_in_a_day * days_in_month_of_june
+#print (hours_in_june())
+def minutes_in_month():
+    minutes_in_hour = 60
+    hours_in_a_day = 24
+    days_in_month_of_august = 31
+    return (hours_in_a_day * minutes_in_hour) * days_in_month_of_august
+#print (minutes_in_month())
 # ---------------------------------
 
 
@@ -27,7 +48,14 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def mid(e):
+    length = len(e)
+    if length % 2 == 0:
+        return ""
+    else:
+        middle = length // 2
+        return e[middle]
+#print(mid('banana'))
 # ---------------------------------
 
 
@@ -36,7 +64,13 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def cc(e):
+    before_last_four = e[:-4]
+    for char in before_last_four:
+        print('*')
+    last_four = e[-4:]
+    return '*' * len(before_last_four) + last_four
+#print(cc('1234567894444'))
 # ---------------------------------
 
 
@@ -62,7 +96,19 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def online_count(statuses):
+    count = 0
+    for value in statuses.values():
+        if value == "online":
+            count += 1
+    return count
+statuses = {
+     "John": "online",
+     "Paul": "offline",
+     "George": "online",
+     "Ringo": "offline"
+}
+#print(online_count(statuses))
 # ---------------------------------
 
 
@@ -72,7 +118,11 @@
 # The function should return the price of the item after the discount has been applied. For example, if the price is 100 and the discount is 20, the function should return 80.
 
 # ---------------------------------
-#      Solution Goes Here ->
+def deal(full, disc):
+    percent = (disc / 100) * full
+    price = full - percent
+    return price
+#print(deal(100, 20))
 # ---------------------------------
 
 
@@ -83,7 +133,17 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+import math
+def pythagoreanTheorum (a, b):
+    hypotenouse = (a ** 2) + (b ** 2)
+    return math.sqrt(hypotenouse)
+#print(pythagoreanTheorum(6,8))
+
+
+def triangle(adjacent, opposite):
+    edges = (adjacent**2 + opposite**2) ** 0.5
+    return int(edges)
+#print(triangle(2,2))
 # ---------------------------------
 
 
@@ -96,5 +156,16 @@
 # Create a python function that takes two numbers and finds the next Nine intervals using the Fibonacci Sequence
 
 # ---------------------------------
-#      Solution Goes Here ->
+def sequence(a,b):
+    c = a + b 
+    d = c + b
+    e = d + c
+    f = e + d
+    g = f + e
+    h = g + f
+    i = h + g
+    j = i + h
+    k = j + i
+    return (c,d,e,f,g,h,i,j,k)
+#print(sequence(0,1))
 # ---------------------------------
